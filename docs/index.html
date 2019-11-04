@@ -13,8 +13,37 @@
   <script>
     window.$docsify = {
 	  loadSidebar:true,
+      auto2top: true,
+      // 调整副标题的级数
+      subMaxLevel: 2,
+      // 替换主题色
+      themeColor: '#4CAF50',
+      themeable: {
+          readyTransition : true, // default
+          responsiveTables: true  // default
+      },
+
+      showLevel: true,
+      //文档标题，会显示在侧边栏顶部。
       name: '',
-      repo: ''
+      //配置仓库地址或者 username/repo 的字符串，会在页面右上角渲染一个 GitHub Corner 挂件。
+      repo: '',
+      //禁用 emoji 解析
+      noEmoji: true,
+      tocLevel: 6,
+      //搜索配置项
+      search: {
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+        paths: 'auto', // or 'auto'
+        placeholder: '搜索',
+        noData: '找不到结果',
+        // 搜索标题的最大程级, 1 - 6
+        depth: 4
+      },
+      pagination: {
+        previousText: '上一章节',
+        nextText: '下一章节',
+      }
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
